@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    double fd, cd;
+    cout << "선택하세요(1:화씨->섭씨,2:섭씨->화씨) ==> " ;
+    cin >> num;
+    cout.precision(7);
+    if (num == 1){
+        cout << "화씨온도 입력: ";
+        cin >> fd;
+        cd = 5.0/9.0 * (fd - 32);
+        cout << "섭씨온도는" << cd <<"입니다."<< endl;
+    }
+    else if (num == 2){
+        cout << "섭씨온도 입력: ";
+        cin >> cd;
+        fd = (5.0/9.0 * cd) + 32;
+        cout << "화씨온도는"<< fd <<"입니다." << endl;
+    }
+    else {
+        cout << "1,2중에 하나를 입력하세요." << endl;
+    }
+
+    return 0;
+}
